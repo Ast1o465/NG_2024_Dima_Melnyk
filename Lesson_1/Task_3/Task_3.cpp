@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    double num1,num2;
-    char dia ;
+    double num1,num2,result;
+    char dia;
     cout << "vvdedit cuslo1" << endl;
     cin >> num1;
     cout << "vvdedit cuslo2" << endl;
@@ -16,20 +16,26 @@ int main()
     switch (dia)
     {
     case '+':
-        cout << "result "<< num1 + num2 << endl;
+         result = num1 + num2;
         break;
     case '-':
-        cout << "result "<< num1 - num2 << endl;
+        result = num1 - num2;
         break;
     case '*':
-        cout << "result "<< num1 * num2 << endl;
+        result = num1 * num2;
         break;
     case '/':
-        cout << "result "<< num1 / num2 << endl;
+        if(num2 == 0){
+            cout<< "error..." << endl;
+            break;
+        }
+        result = num1 / num2;
         break;
     default:
+        cout <<"error.." <<endl;
         break;
     }
+    cout << "result: " << result << endl;
 
     return 0;
 }

@@ -11,7 +11,7 @@ int main() {
     // telo elki
     for (int i = 1; i <= height; i++) {
         int stars = 2 * i - 1; // kilkist stars v radke
-        int spaces = 80;
+        int spaces = (80 - stars) / 2;
 
         for (int j = 0; j < spaces; j++) {
             cout << " ";
@@ -23,7 +23,6 @@ int main() {
 
         cout << endl;
     }
-
     // stvol elki
     int trunkSpaces = (80 - 1) / 2; // vidstup dla stvola
     for (int i = 0; i < trunkSpaces; i++) {
