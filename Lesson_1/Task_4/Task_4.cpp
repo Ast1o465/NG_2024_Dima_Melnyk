@@ -3,11 +3,11 @@
 using namespace std;
 
 int main() {
-    int zarplata;
+    int salary;
     cout << "vvedit vashu zarplatu: ";
-    cin >> zarplata;
+    cin >> salary;
 
-    cout << ((zarplata - 1000 < 0) ? "nada rabotat bilshe" :
-                 ((zarplata - 1000000 < 0) ? "Ti molodec" : "Ti milioner:3")) << endl;
+    cout << ((salary - 1000 < 0) ? "nada rabotat bilshe" :
+                 ((salary - 1000000 < 0) ? "Ti molodec" : "Ti milioner:3")) << endl;
     return 0;
 }
