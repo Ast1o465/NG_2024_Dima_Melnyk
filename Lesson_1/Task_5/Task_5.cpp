@@ -9,23 +9,24 @@ int main() {
     cin >> height;
 
     // telo elki
-    for (int i = 1; i <= height; i++) {
-        int stars = 2 * i - 1; // kilkist stars v radke
+    for (int row = 1; row <= height; row++) {
+        int stars = 2 * row - 1; // kilkist stars v radke
         int spaces = (80 - stars) / 2;
 
-        for (int j = 0; j < spaces; j++) {
+        for (int spaceIndex = 0; spaceIndex < spaces; spaceIndex++) {
             cout << " ";
         }
 
-        for (int k = 1; k <= stars; k++) {
+        for (int starIndex = 1; starIndex <= stars; starIndex++) {
             cout << "*";
         }
 
         cout << endl;
     }
+
     // stvol elki
     int trunkSpaces = (80 - 1) / 2; // vidstup dla stvola
-    for (int i = 0; i < trunkSpaces; i++) {
+    for (int spaceIndex = 0; spaceIndex < trunkSpaces; spaceIndex++) {
         cout << " ";
     }
     cout << "*" << endl;
