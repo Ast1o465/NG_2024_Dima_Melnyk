@@ -6,17 +6,17 @@ int main() {
     cout << "vvedit vashu zarplatu: ";
     cin >> salary;
 
-    if (salary - 1000 < 0) {
+    if (salary < 1000) {
         cout << "nada rabotat bilshe" << endl;
-        return 0;
     }
 
-    if (salary - 1000000 < 0) {
-        cout << "Ti molodec" << endl;
-        return 0;
+    if (salary > 999) {
+        if (salary < 1000000) {
+            cout << "Ti molodec" << endl;
+        }
     }
 
-    cout << "Ti milioner:3" << endl;
-
-    return 0;
+    if (salary > 999999) {
+        cout << "Ti milioner:3" << endl;
+    }
 }
