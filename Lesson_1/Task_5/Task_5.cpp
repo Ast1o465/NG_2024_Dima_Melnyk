@@ -8,15 +8,20 @@ int main() {
     cout << "Vvedit kilkist radkiv: ";
     cin >> height;
 
+    // Calculate maximum width of the tree based on the height
+    int maxWidth = 2 * height - 1;
+
     // telo elki
     for (int row = 1; row <= height; row++) {
         int stars = 2 * row - 1; // kilkist stars v radke
-        int spaces = (80 - stars) / 2;
+        int spaces = (maxWidth - stars) / 2; // Calculate spaces based on maxWidth
 
+        // Print leading spaces
         for (int spaceIndex = 0; spaceIndex < spaces; spaceIndex++) {
             cout << " ";
         }
 
+        // Print stars
         for (int starIndex = 1; starIndex <= stars; starIndex++) {
             cout << "*";
         }
@@ -25,7 +30,7 @@ int main() {
     }
 
     // stvol elki
-    int trunkSpaces = (80 - 1) / 2; // vidstup dla stvola
+    int trunkSpaces = (maxWidth - 1) / 2; // Calculate spaces for the trunk
     for (int spaceIndex = 0; spaceIndex < trunkSpaces; spaceIndex++) {
         cout << " ";
     }
