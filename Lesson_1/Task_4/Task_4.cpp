@@ -15,7 +15,6 @@ int main() {
             cout << "Ti molodec" << endl;
         }
     }
-
     if (salary > 999999) {
         cout << "Ti milioner:3" << endl;
     }

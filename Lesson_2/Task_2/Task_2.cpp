@@ -5,13 +5,13 @@ int main() {
     vector<int> values(5);
 
     //zaput cusel v korustuvaca
-    for (int i = 0; i < 5; ++i) {
-        cout << "Enter " << (i + 1) << " value: ";
-        cin >> values[i];
+    for (int index  = 0; index  < 5; ++index ) {
+        cout << "Enter " << (index  + 1) << " value: ";
+        cin >> values[index ];
     }
-    for (int i = 0; i < 5; ++i) {
-        int stars = values[i];
-        for (int j = 0; j < stars; ++j) {
+    for (int valueIndex = 0; valueIndex < 5; ++valueIndex) {
+        int stars = values[valueIndex];
+        for (int starIndex = 0; starIndex < stars; ++starIndex) {
             cout << "* ";
         }
         cout << endl;
