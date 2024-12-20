@@ -2,4 +2,3 @@ build/
 *.pro
 *.pro.user
 *.vscode
-*.exe
