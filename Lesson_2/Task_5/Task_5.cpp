@@ -2,34 +2,32 @@
 #include <string>
 using namespace std;
 
-
-bool isLetter(char c) {
-    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+bool isLetter(char currentChar) {
+    return (currentChar >= 'a' && currentChar <= 'z') || (currentChar >= 'A' && currentChar <= 'Z');
 }
 
 int countWords(const string& str) {
     int wordCount = 0;
     bool inWord = false;
     
-    for (char c : str) {
-        if (isLetter(c)) {
+    for (char currentChar : str) {
+        if (isLetter(currentChar)) {
             if (!inWord) {
-                wordCount++; 
+                wordCount++;
                 inWord = true;
             }
         } else {
-            inWord = false; 
+            inWord = false;
         }
     }
     
     return wordCount;
 }
-
 int main() {
-    string input = "234Hello&*&#world#$%a";  
+    string input = "234Hello&*&#world#$%a";
     
     int words = countWords(input);
     cout << "Test string: " << input << endl;
-    cout << "Number of words: " << words << endl; 
+    cout << "Number of words: " << words << endl;
     return 0;
 }
