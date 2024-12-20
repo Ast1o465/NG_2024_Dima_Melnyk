@@ -9,13 +9,10 @@ int main() {
     if (salary < 1000) {
         cout << "nada rabotat bilshe" << endl;
     }
-
-    if (salary > 999) {
-        if (salary < 1000000) {
-            cout << "Ti molodec" << endl;
-        }
+    else if (salary < 1000000) {
+        cout << "Ti molodec" << endl;
     }
-    if (salary > 999999) {
+    else {
         cout << "Ti milioner:3" << endl;
     }
 }
