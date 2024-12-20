@@ -1,18 +1,27 @@
 #include <iostream>
-#include <vector>
-using namespace std;
-int main() {
-    vector<int> values(5);
+#include <algorithm>
 
-    //zaput cusel v korustuvaca
-    for (int index  = 0; index  < 5; ++index ) {
-        cout << "Enter " << (index  + 1) << " value: ";
-        cin >> values[index ];
+using namespace std;
+
+int main() {
+    int values[5];
+    int sortedValues[5];
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Enter " << (i + 1) << " value: ";
+        cin >> values[i];
+        sortedValues[i] = values[i];
     }
-    for (int valueIndex = 0; valueIndex < 5; ++valueIndex) {
-        int stars = values[valueIndex];
-        for (int starIndex = 0; starIndex < stars; ++starIndex) {
-            cout << "* ";
+
+    sort(sortedValues, sortedValues + 5, greater<int>());
+
+    for (int row = 0; row < sortedValues[0]; row++) {
+        for (int col = 0; col < 5; col++) {
+            if (row < values[col]) {
+                cout << "* ";
+            } else {
+                cout << "  ";
+            }
         }
         cout << endl;
     }
