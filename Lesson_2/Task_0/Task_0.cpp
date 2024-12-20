@@ -4,25 +4,25 @@
 
 using namespace std;
 
-string decryptCaesarCipher(const string& text, int shift) {
-    string result = "";
-    for (char c : text) {
-        if (isalpha(c)) {
-            char base = islower(c) ? 'a' : 'A';
+string decryptCaesarCipher(const string& encryptedText, int shiftKey) {
+    string decryptedResult = "";
+    for (char currentChar : encryptedText) {
+        if (isalpha(currentChar)) {
+            char alphabetStart = islower(currentChar) ? 'a' : 'A';
             // Decrypting the character
-            c = (c - base - shift + 26) % 26 + base;
+            currentChar = (currentChar - alphabetStart - shiftKey + 26) % 26 + alphabetStart;
         }
-        result += c; // Append the decrypted (or unchanged) character
+        decryptedResult += currentChar; // Append the decrypted (or unchanged) character
     }
-    return result;
+    return decryptedResult;
 }
 
 int main() {
-    string text = "Spwwz, declyrpc. Dppxd wtvp jzf yze ufde l dnctae vtootp, dz zfc lrpynj slgp dzxp uzm qzc jzf. Tq jzf hlye ez lnnpae esp \"uzm\" zqqpc - ufde afds ez jzfc cpaz esp nzop, esle sld opncjaepo estd xpddlrp, lyo ylxp te nlccze... Hp lcp hltetyr...";
-    int shift = 11;
+    string encryptedMessage = "Spwwz, declyrpc. Dppxd wtvp jzf yze ufde l dnctae vtootp, dz zfc lrpynj slgp dzxp uzm qzc jzf. Tq jzf hlye ez lnnpae esp \"uzm\" zqqpc - ufde afds ez jzfc cpaz esp nzop, esle sld opncjaepo estd xpddlrp, lyo ylxp te nlccze... Hp lcp hltetyr...";
+    int shiftValue = 11;
 
-    string decryptedText = decryptCaesarCipher(text, shift);
-    cout << "Decrypted text: \n" << decryptedText << endl;
+    string decryptedMessage = decryptCaesarCipher(encryptedMessage, shiftValue);
+    cout << "Decrypted text: \n" << decryptedMessage << endl;
 
     return 0;
 }
