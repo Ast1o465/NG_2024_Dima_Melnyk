@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 bool isLetter(char currentChar) {
@@ -23,11 +24,16 @@ int countWords(const string& str) {
     
     return wordCount;
 }
+
 int main() {
-    string input = "234Hello&*&#world#$%a";
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
     
     int words = countWords(input);
-    cout << "Test string: " << input << endl;
     cout << "Number of words: " << words << endl;
     return 0;
 }
+
+// "234Hello&*&#world#$%a"
+// output: 3 words
