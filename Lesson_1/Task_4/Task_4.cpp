@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -9,10 +10,10 @@ int main() {
     if (salary < 1000) {
         cout << "nada rabotat bilshe" << endl;
     }
-    else if (salary < 1000000) {
+    if (salary > 999 && salary < 1000000) {
         cout << "Ti molodec" << endl;
     }
-    else {
+    if (salary > 999999) {
         cout << "Ti milioner:3" << endl;
     }
 }
